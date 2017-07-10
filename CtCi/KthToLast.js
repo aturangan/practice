@@ -23,7 +23,7 @@ let getKthLastElement = (head, k) => {
   return behindCurrent; 
 }
 
-let SinglyLinkedList = (data, next) {
+let SinglyLinkedList = (data, next) => {
   this.data = data; 
   this.next = next; 
 }
