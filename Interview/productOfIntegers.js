@@ -1,3 +1,6 @@
+//O(n) time 
+//O(n) space because the array we're creating is only as big as the input array
+//brute force version is 2 for loops
 
 function productOfIntegers(arg) {
   let results = []; 
@@ -7,7 +10,6 @@ function productOfIntegers(arg) {
     results.push(product); 
     product *= arg[i]; 
   }
-  console.log('first results', results); 
   
   product = 1; 
   
