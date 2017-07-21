@@ -29,7 +29,7 @@ let highestProduct = (integers) => {
       lowestProductOf2, 
       current * highest, 
       current * lowest
-    )
+    );
     
     highest = Math.max(
       highest, 
