@@ -1,3 +1,5 @@
+//O(n) time, O(1) space
+
 function LinkedListNode(value) {
   this.value = value; 
   this.next = null; 
@@ -15,7 +17,7 @@ let hasCycle = (head) => {
       return true; 
     }
   }
-  
+
   return false; 
 };
 
