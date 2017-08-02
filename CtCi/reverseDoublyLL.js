@@ -13,10 +13,10 @@ DoublyLinkedList.prototype.push = function(val){
     current = head,
     previous = head;
   
-  if(!head){
+  if (!head){
     this.head = {value: val, previous:null, next:null };
   } else {
-    while(current && current.next){
+    while (current && current.next){
       previous = current;
       current = current.next;
     }     
@@ -25,18 +25,21 @@ DoublyLinkedList.prototype.push = function(val){
 }
 
 function reverseDoublyLL(dll){
-   var head = dll.head,
-       current = dll.head,
-       tmp;
-   while(current){
+  var head = dll.head,
+    current = dll.head,
+      tmp;
+    while(current){
       tmp = current.next;
       current.next = current.previous;
       current.previous = tmp;
-      if(!tmp){
+      
+      if (!tmp){
          //set the last node as header
-         dll.head = current;
+        dll.head = current;
       }
+
       current = tmp;
-   }
+    }
+
   return dll;
 }

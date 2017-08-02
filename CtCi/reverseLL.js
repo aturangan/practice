@@ -1,4 +1,4 @@
-function LinkedList(){  
+function LinkedList() {  
   this.head = null;
 }
 
