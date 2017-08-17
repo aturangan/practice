@@ -1,3 +1,3 @@
 # practice
 
-A repo to practice toy problems
+Data Structures and Algorithms Practice
