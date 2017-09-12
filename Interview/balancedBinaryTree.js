@@ -35,11 +35,13 @@ BinaryTreeNode.prototype.isBalanced = function(treeRoot) {
     let node = nodePair[0]; 
     let depth = nodePair[1]; 
 
+    //if the depth hasn't been stored yet, add to the depths array
     if (!node.left && !node.right) {
       if (depths.indexOf(depth) < 0) {
         depths.push(depth); 
       }
 
+      //checking if there's a difference in depth that's greater than 1
       if (depths.length > 2 || (depths.length === 2 && Math.abs(depths[0] - depths[1]) > 1)) {
         return false; 
       }

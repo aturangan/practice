@@ -9,34 +9,31 @@ var cakeTypes = [
 
 var capacity = 20;
 
-let maxDuffelBagValue = (cakeTypes, capacity) => {
+const maxDuffelBagValue = (cakeTypes, weightCapacity) => {
+  let maxValuesAtCapacities = []; 
 
-  var maxValuesAtCapacities = [];
-  
-  for (var i = 0; i <= weightCapacity; i++) {
-    maxValuesAtCapacities[i] = 0;
+  for (let i = 0; i <= weightCapacity; i++) {
+    maxValuesAtCapacities[i] = 0; 
   }
 
-  for (var currentCapacity = 0; currentCapacity <= weightCapacity; currentCapacity++) {
-    var currentMaxValue = 0;
+  for (let currentCapacity = 0; currentCapacity <= weightCapacity; currentCapacity++) {
+    let currentMaxValue = 0; 
 
-    for (var j = 0; j < cakeTypes.length; j++) {
-      var cakeType = cakeTypes[j];
+    for (let j = 0; j < cakeTypes.length; j++) {
+      let cakeType = cakeTypes[j]; 
 
       if (cakeType.weight === 0 && cakeType.value !== 0) {
-        return Infinity;
+        return Infinity; 
       }
 
       if (cakeType.weight <= currentCapacity) {
-        var maxValueUsingCake = cakeType.value + maxValuesAtCapacities[currentCapacity - cakeType.weight];
+        let maxValueUsingCake = cakeType.value + maxValuesAtCapacities[currentCapacity - cakeType.weight];
         currentMaxValue = Math.max(maxValueUsingCake, currentMaxValue);
       }
     }
-     
-    maxValuesAtCapacities[currentCapacity] = currentMaxValue;
+
+    maxValuesAtCapacities[currentCapacity] = currentMaxValue; 
   }
 
   return maxValuesAtCapacities[weightCapacity];
 };
-
-maxDuffelBagValue(cakeTypes, capacity);
