@@ -34,7 +34,7 @@ MaxStack.prototype.pop = function() {
     this.maxesStack.pop(); 
   }
   return item; 
-}
+};
 
 MaxStack.prototype.getMax = function() {
   return this.maxesStack.peek(); 
