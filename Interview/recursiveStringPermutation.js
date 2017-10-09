@@ -1,6 +1,6 @@
 function getPermutations(string) {
   if (string.length <= 1) {
-    return new Set(string); //do this to exit out of recursion, but what do you do with the 'h'
+    return new Set(string);
   }
 
   let allCharsExceptLast = string.slice(0, -1); 
